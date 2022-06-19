@@ -43,11 +43,18 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IServiceUsuario.cs" />
+    <Compile Include="Services\ServiceUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOS\" />
-    <Folder Include="Services\" />
     <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infraestructure\Infraestructure.csproj">
+      <Project>{7977235c-c563-4c2a-9b55-e1948a5467b4}</Project>
+      <Name>Infraestructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
