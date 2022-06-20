@@ -17,7 +17,7 @@ namespace Web.Controllers
             try
             {
                 IServiceUsuario _SeviceUsuario = new ServiceUsuario();
-                lista = _SeviceUsuario.GetUsuario();
+                lista = _SeviceUsuario.GetUsuarios();
                 ViewBag.tituloPag = "Lista de Usuarios";
                 //ViewBag.ListaUsuario = ;
 

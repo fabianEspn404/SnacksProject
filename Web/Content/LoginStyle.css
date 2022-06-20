@@ -1,0 +1,21 @@
+﻿body {
+}
+
+.CentrarContenidoLogin {
+    margin: 50px auto;
+}
+
+.botonIngresoLogin {
+    background-color: #e95420;
+    color: black;
+    font-size: 15px;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.botonIngresoLogin:hover {
+    background-color: #e97a02;
+    transition: 0.5s;
+}

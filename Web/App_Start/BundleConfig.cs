@@ -19,11 +19,16 @@ namespace Web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            //SweetAlert
+            bundles.Add(new ScriptBundle("~/bundles/sweetalert").Include(
+                        "~/Scripts/sweetalert.min.js"));
+
             bundles.Add(new Bundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new Bundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css"
+                      "~/Content/bootstrap.css",
+                      "~/Content/sweetalert.css"
                       //"~/Content/site.css"));
                       ));
 

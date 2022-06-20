@@ -10,9 +10,10 @@ namespace ApplicationCore.Services
 {
     public class ServiceUsuario : IServiceUsuario
     {
-        public IEnumerable<Usuario> GetUsuario()
+        public IEnumerable<Usuario> GetUsuarios()
         {
-            throw new NotImplementedException();
+            IRepositoryUsuario repository = new RepositoryUsuario();
+            return repository.GetUsuarios();
         }
 
         public Usuario GetUsuarioByUsername(string username)
@@ -20,5 +21,13 @@ namespace ApplicationCore.Services
             IRepositoryUsuario repository = new RepositoryUsuario();
             return repository.GetUsuarioByUsername(username);
         }
+
+        public Usuario GetUsuario(string username, string clave)
+        {
+            IRepositoryUsuario repository = new RepositoryUsuario();
+            return repository.GetUsuario(username, clave);
+
+        }
+
     }
 }

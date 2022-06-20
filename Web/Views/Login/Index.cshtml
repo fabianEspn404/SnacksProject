@@ -1,33 +1,48 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model Infraestructure.Models.Usuario
 
-@using (Html.BeginForm())
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="~/Content/LoginStyle.css" type="text/css" />
+
+@using (Html.BeginForm("Login", "Login"))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-    <div class="form-group">
-        @*@Html.LabelFor(model => model.IdUsuario, htmlAttributes: new { @class = "control-label col-md-5" })
-        @Html.EditorFor(model => model.IdUsuario, new { htmlAttributes = new { @class = "form-control" } })
-        @Html.ValidationMessageFor(model => model.IdUsuario, "", new { @class = "text-danger" })*@
-    </div>
-    <div class="form-group mb-3 mt-3">
-        @*@Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
-        @Html.PasswordFor(model => model.Contrasena, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })*@
-    </div>
+    <h1>Por favor ingrese sus credenciales</h1>
+    <div class="row justify-content-center CentrarContenidoLogin">
+            
+        <div class="col-md-6 form-group">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mb-3 mt-3">
+                @Html.LabelFor(model => model.Clave, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.PasswordFor(model => model.Clave, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
+            </div>
 
 
-    <div class="d-sm-flex mb-3 text-center">
-        @*@Html.ActionLink("Olvidé mi contraseña", "Recovery", "Login", htmlAttributes: new { @style = "color:#16697a" })*@
+            <div class="d-sm-flex mb-3 text-center">
+                @Html.ActionLink("Olvidé mi contraseña", "Recovery", "Login", htmlAttributes: new { @style = "color:#16697a" })
 
-    </div>
+            </div>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Ingresar" class="btn btn-default botonIngresoLogin" />
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Ingresar" class="btn btn-primary" />
+                </div>
+            </div>
         </div>
     </div>
 
+    <script>
+        Swa
+    </script>
 }
+
