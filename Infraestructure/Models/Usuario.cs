@@ -17,5 +17,4 @@ namespace Infraestructure.Models
         public string Username { get; set; }
         public string Clave { get; set; }
     }
-
 }

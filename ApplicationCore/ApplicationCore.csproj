@@ -45,10 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IServiceUsuario.cs" />
     <Compile Include="Services\ServiceUsuario.cs" />
+    <Compile Include="Utils\Cryptography.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOS\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infraestructure\Infraestructure.csproj">

@@ -15,5 +15,8 @@ namespace Infraestructure.Repository
 
 
         Usuario GetUsuarioByUsername(string username);
+
+        Usuario Save(Usuario usuario);
+
     }
 }

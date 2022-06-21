@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
 <link rel="stylesheet" href="~/Content/LoginStyle.css" type="text/css" />
 
@@ -12,7 +13,7 @@
 
     <h1>Por favor ingrese sus credenciales</h1>
     <div class="row justify-content-center CentrarContenidoLogin">
-            
+
         <div class="col-md-6 form-group">
             <div class="form-group">
                 @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-5" })
@@ -27,7 +28,11 @@
 
 
             <div class="d-sm-flex mb-3 text-center">
-                @Html.ActionLink("Olvidé mi contraseña", "Recovery", "Login", htmlAttributes: new { @style = "color:#16697a" })
+                @Html.ActionLink(
+    linkText: "Crear cuenta",
+    actionName: "Create",
+    controllerName: "Usuario")
+                @*@Html.ActionLink("Crear cuenta", "Create", "Usuario", htmlAttributes: new { @style = "color:#16697a" })*@
 
             </div>
 
@@ -41,8 +46,6 @@
         </div>
     </div>
 
-    <script>
-        Swa
-    </script>
+
 }
 
